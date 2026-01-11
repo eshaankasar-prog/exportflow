@@ -1,0 +1,158 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "ExportFlow",
+      "persona": "E1 - The Anti-AI Designer",
+      "vibe": "Organic Utility",
+      "archetype": "Organic & Earthy (Trust, Growth, Calm)",
+      "principles": [
+        "Fusion over Imitation: Mix Logistics precision with Organic warmth",
+        "Content is King: Data clarity first, decoration second",
+        "Negative Space: Use whitespace to reduce cognitive load",
+        "Contrast: Sharp text against soft backgrounds"
+      ]
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Manrope, sans-serif",
+        "body": "IBM Plex Sans, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-4xl md:text-5xl font-bold tracking-tight",
+        "h2": "text-3xl font-semibold tracking-tight",
+        "h3": "text-2xl font-medium",
+        "body": "text-base leading-relaxed",
+        "small": "text-sm font-medium tracking-wide uppercase text-muted-foreground"
+      },
+      "imports": [
+        "@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=Manrope:wght@400;500;700;800&display=swap');"
+      ]
+    },
+    "colors": {
+      "theme": "light",
+      "palette": {
+        "background": "36 33% 97%", 
+        "foreground": "160 6% 10%",
+        "card": "0 0% 100%",
+        "card_foreground": "160 6% 10%",
+        "popover": "0 0% 100%",
+        "popover_foreground": "160 6% 10%",
+        "primary": "156 42% 18%",
+        "primary_foreground": "36 33% 97%",
+        "secondary": "24 66% 48%",
+        "secondary_foreground": "0 0% 100%",
+        "muted": "36 20% 92%",
+        "muted_foreground": "160 4% 45%",
+        "accent": "42 68% 55%",
+        "accent_foreground": "160 6% 10%",
+        "destructive": "0 84% 60%",
+        "destructive_foreground": "0 0% 98%",
+        "border": "160 5% 90%",
+        "input": "160 5% 90%",
+        "ring": "156 42% 18%"
+      },
+      "usage": {
+        "primary": "Main actions, active states, sidebar active items",
+        "secondary": "Highlights, 'New Order' badges, important tags",
+        "accent": "Warnings, 'Pending' states, focus rings",
+        "background": "Global page background (Warm Sand)",
+        "card": "Surface for data tables and widgets (Pure White)"
+      }
+    },
+    "layout": {
+      "spacing": {
+        "container_padding": "p-6 md:p-10",
+        "section_gap": "gap-8",
+        "widget_gap": "gap-6"
+      },
+      "grid_strategy": "Mode B: The Control Room",
+      "border_radius": {
+        "default": "rounded-none",
+        "card": "rounded-sm",
+        "button": "rounded-md"
+      }
+    },
+    "components": {
+      "buttons": {
+        "style": "Flat, high contrast, no shadow by default",
+        "hover": "translate-y-[-1px] shadow-md transition-all duration-200"
+      },
+      "cards": {
+        "style": "Border-Grid style. 1px solid border-border. No shadow. Clean, technical look.",
+        "header": "Border-b border-border p-4 bg-muted/20",
+        "content": "p-6"
+      },
+      "inputs": {
+        "style": "bg-white border-input focus:ring-1 focus:ring-primary rounded-sm h-10"
+      },
+      "tables": {
+        "style": "Dense, minimal. Header uppercase text-xs. Row hover bg-muted/50."
+      }
+    },
+    "visual_assets": {
+      "images": {
+        "login_background": {
+          "url": "https://images.unsplash.com/photo-1703977883249-d959f2b0c1ae?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "alt": "Shipping container port at sunset",
+          "usage": "Full screen background for login page with overlay"
+        },
+        "dashboard_hero": {
+          "url": "https://images.unsplash.com/photo-1595263026408-d502567353ee?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "alt": "Cargo ship at sea",
+          "usage": "Header banner or welcome widget background"
+        },
+        "product_placeholder": {
+          "url": "https://images.unsplash.com/photo-1666601434378-b0ca655bf2b1?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "alt": "Jaggery product sample",
+          "usage": "Placeholder for product images"
+        }
+      },
+      "icons": {
+        "library": "lucide-react",
+        "style": "Stroke width 1.5px, size 18px or 20px"
+      }
+    },
+    "motion": {
+      "transitions": "transition-all duration-200 ease-out",
+      "hover_effects": "hover:bg-muted/50 hover:text-foreground",
+      "page_transition": "animate-in fade-in slide-in-from-bottom-4 duration-500"
+    }
+  },
+  "implementation_guide": {
+    "steps": [
+      {
+        "step": 1,
+        "action": "Setup Theme",
+        "details": "Update tailwind.config.js and index.css with the Organic & Earthy color palette. Import fonts."
+      },
+      {
+        "step": 2,
+        "action": "Create Layout Shell",
+        "details": "Build the Sidebar + Header layout. Use 'Control Room' grid logic. Ensure mobile responsiveness."
+      },
+      {
+        "step": 3,
+        "action": "Build Dashboard",
+        "details": "Implement the 4 key metric cards and the 'Follow-ups Due' widget. Use Recharts for a simple 'Orders vs Inquiries' chart."
+      },
+      {
+        "step": 4,
+        "action": "Buyer Management",
+        "details": "Create the Buyers List (DataTable) and Add/Edit Form (Sheet or Dialog). Implement stages: Contacted, Replied, Sample, Order."
+      },
+      {
+        "step": 5,
+        "action": "Pricing Calculator",
+        "details": "Build the FOB/CIF calculator. Use a split-screen layout: Inputs on left, Real-time breakdown on right."
+      }
+    ],
+    "universal_rules": [
+      "Do not use gradients for backgrounds.",
+      "Use 'Manrope' for all headings and 'IBM Plex Sans' for body text.",
+      "Ensure all interactive elements have data-testid attributes.",
+      "Use 'sonner' for toast notifications.",
+      "Keep the UI dense but readable (p-4 for cards, gap-4 for grids)."
+    ]
+  }
+}
