@@ -1,0 +1,28 @@
+.App {
+  min-height: 100vh;
+}
+
+.stat-card {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav-link {
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.table-row {
+  transition: background-color 0.2s ease-out;
+}
+
+button {
+  transition: background-color 0.2s ease-out, transform 0.1s ease-out;
+}
+
+button:active {
+  transform: scale(0.98);
+}
